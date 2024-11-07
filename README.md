@@ -23,7 +23,7 @@ We will use [Hoppscotch.io](https://hoppscotch.io/) to test API responses. Hopps
 1. Go to [hoppscotch.io](https://hoppscotch.io/).
 1. If this is your first time using the tool, you will need to install the browser extension.
 
-    ![Hoppscotch](./images/hoppscotch-0.png)
+    ![Hoppscotch](./images/hoppscotch-extension-prompt.png)
 
 1. Select the browser of your choice. Ensure the option is toggled on for `Use the browser extension to send requests (if present)`.
 1. Add the extension.
