@@ -4,18 +4,18 @@ To conclude we will expand on the [ExpressJS](./../2-intro-to-express) and [API 
 
 We will build on our existing code which so far just has routes handling `/about` and `/about/:{whatever}`.
 
-Ultimately we will make routes that handle requests to create, read, update and delete ***movie*** resources at endpoints we setup.
+Ultimately we will make routes that handle requests to create, read, update and delete ***movie*** resources at endpoints we set up.
 
-NOTE: You will often see these actions referred to as CRUD (create, read, update, delete) routes.
+> NOTE: You will often see these actions referred to as CRUD (create, read, update, delete) routes.
 
 ## Movie Model
 
-Before we write any more code we should come up with an idea of how our data should look and behave. This allows us to have a clear idea of how the final state to build towards when writing the code rather than making it up as we go.
+Before we write any more code, we should come up with a plan of how our data should look and behave. This allows us to have a clear idea of the final state when writing the code, rather than making it up as we go.
 
 The movie resource in the context of our application will have a uniform structure for each individual movie. We achieve that by defining a *model*, a definition for the movie resource that outlines what properties each one will have.
 
 
-A Movie can have the following fields as properties:
+A "movie" can have the following fields as properties:
 
 | Field       | Type     | Description                                    |
 | ----------- | -------- | ---------------------------------------------- |
@@ -24,7 +24,7 @@ A Movie can have the following fields as properties:
 | `genre`     | `string` | Movie genre                                    |
 | `img`       | `string` | URL to a movie poster image                    |
 
-We will take advantage of Javascript objects for how we store our movies on our server:
+We will take advantage of JavaScript objects for how we store each movie on our server:
 
 ```json
 {
@@ -35,124 +35,53 @@ We will take advantage of Javascript objects for how we store our movies on our 
 }
 ```
 
-Our application has our data we need for movies in the ***data/MOVIES_STORE.js*** file.
+Our application has our data we need for movies in the `data/MOVIES_STORE.js` file.
 
 ## API Endpoints
 
-A part of RESTful API design is your naming convention being uniform for resource endpoints.
-
-The following endpoints follow a CRUD pattern when creating an API:
+An important part of RESTful API design is in the uniform naming convention for resource endpoints. The endpoints below follow a CRUD pattern when creating an API. Their request bodies (where applicable) and response descriptions are listed as well.
 
 ### Get All Movies
 
-**Request:**
+| Request | Response |
+| - | - |
+| `GET /movies` | 200 OK - `movie[]`|
 
-```txt
-GET /movies
-```
-
-**Response:**
-
-```txt
-200 OK
-Movie[]
-```
 
 ### Get Movie By Id
 
-```txt
-GET /movies/{id}
-```
-
-**Response:**
-
-Successful
-
-```txt
-200 OK
-Movie
-```
-
-Movie not found
-
-```txt
-404 Not Found
-```
+| Request | Response |
+| - | - |
+| `GET /movies/{id}`| 200 OK - `movie` |
 
 ### Add New Movie
 
-**Request:**
-
-```txt
-POST /movies
-
-Body
-{
-    "name": "string",
-    "genre": "string",
-    "img": "string"
-}
-```
-
-**Response:**
-
-```txt
-201 Created
-Movie
-```
+| Request | Request Body | Response |
+| - | - | - |
+| `POST /movies` | `{"name": "string", "genre": "string", "img": "string"}`| 201 Created - `movie`|
 
 ### Update Movie
 
-**Request:**
-
-```txt
-PUT /movies/{id}
-
-Body
-{
-    "name": "string",
-    "genre": "string",
-    "img": "string"
-}
-```
-
-**Response:**
-
-```txt
-200 OK
-
-{
-    "message": "string"
-}
-```
+| Request | Request Body | Response |
+| - | - | - |
+| `PUT /movies/{id}` | `{"name": "string", "genre": "string", "img": "string"}`| 200 OK - `movie`|
 
 ### Delete Movie
 
-**Request:**
+| Request | Response |
+| - | - |
+| `DELETE /movies/{id}`| 200 OK - `movieId`|
 
-```txt
-DELETE /movies/{id}
-```
+## Importing Collection in Hoppscotch
 
-**Response:**
+We can quickly setup the HTTP requests we want to use to help test our server code by importing the collection of requests from the JSON file [here](../reference/movies-api-collection.json).
 
-```txt
-200 OK
+![hoppscotch import](./images/hoppscotch/hoppscotch-import.png) 
+> Click Import > Import from Hoppscotch > Choose Files. Navigate to the file `movies-api-collection.json` and select it.
 
-{
-    "message": "string"
-}
-```
+You should see the following requests that we will use to help debug our application:
 
-## Importing Thunder Client Collection
-
-We can quickly setup the HTTP requests we want to use to help test our server code by importing the Thunder Client collection of requests from the JSON file [here](../reference/movies-api-collecition.json)
-
-![thunder client import](./images/thunder-client/thunder-client-import.png) 
-
-Here are the requests we will use to help debug our application:
-
-![thunder client import 2](./images/thunder-client/thunder-client-import-2.png) 
+![hoppscotch import 2](./images/hoppscotch/hoppscotch-import-2.png) 
 
 ## Setting Up CORS
 

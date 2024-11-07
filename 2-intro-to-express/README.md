@@ -26,7 +26,7 @@ An HTTP request will be sent out to an API whenever a user interacts with it. A 
 
 ![example-request](./images/request-structure.png) 
 
-We'll be using Thunder Client, a VS Code extension, to make requests to the server's API for debugging and testing purposes.
+We'll be using the Hoppscotch web client to make requests to the server's API for debugging and testing purposes.
 
 
 ## Running An Express App
@@ -120,7 +120,7 @@ The code block above where the callback function is broken out into its own `han
 
 ## Continue Making The Express API
 
-Upon cloning the repo one route (`/about`) will already be in place for our Express application's API.
+Upon cloning the repo, one route (`/about`) will already be in place for our Express application's API.
 
 To start the server:
 
@@ -128,13 +128,13 @@ To start the server:
 - Run `npm install` to install the application dependencies.
 - Run `npm run start:dev` to start the server.
 
-To actually access our current endpoint, we can go to `http://localhost:8080/about` in any web browser to send a GET request to the root endpoint `/about`.
+To actually access our current endpoint, we can use Hoppscotch! Enter `http://localhost:8080/about` to send a `GET` request to the root endpoint `/about`. Press **Send**.
 
 Your response should look like:
 
 ![response body](./images/response-body.png) 
 
-Now we will create another *route* endpoint that uses parameters to take in dynamic values from the URL provided whenever it is called. For a path with a parameter `name`, when someone calls `GET about/{name}` we are going to return an about string value that uses the name variable. So if a client sends a `GET /about/sample-name` request, the API would respond with `"This is an API service for CRUD actions on a movies resource...for you, sample-name"`
+Now we will create another *route* endpoint that uses parameters to take in dynamic values from the URL provided whenever it is called. For a path with a parameter `name`, when someone calls `GET about/{name}` we are going to return an "about" string value that uses the `name` variable. So if a client sends a `GET /about/sample-name` request, the API would respond with `"This is an API service for CRUD actions on a movies resource...for you, sample-name"`
 
 ***index.js***
 

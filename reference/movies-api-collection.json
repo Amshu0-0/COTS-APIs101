@@ -1,80 +1,114 @@
-{
-    "client": "Thunder Client",
-    "collectionName": "movies-api",
-    "dateExported": "2023-10-30T08:15:09.219Z",
-    "version": "1.1",
+[
+  {
+    "v": 4,
+    "name": "movies-api-collection",
     "folders": [],
     "requests": [
-        {
-            "_id": "19cbc268-37e0-4e6a-b4b2-ef596f4a4b09",
-            "colId": "2e5d4120-c4a0-4713-a197-9dee12ade649",
-            "containerId": "",
-            "name": "get movie by id",
-            "url": "localhost:8080/movies/1",
-            "method": "GET",
-            "sortNum": 20000,
-            "created": "2023-10-30T08:07:07.160Z",
-            "modified": "2023-10-30T08:07:07.160Z",
-            "headers": [],
-            "params": [],
-            "tests": []
+      {
+        "v": "8",
+        "endpoint": "http://localhost:8080/movies",
+        "name": "Get All Movies",
+        "params": [],
+        "headers": [],
+        "method": "GET",
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
         },
-        {
-            "_id": "e51b8c19-59bd-46ed-b15d-6af0cf5f97a4",
-            "colId": "2e5d4120-c4a0-4713-a197-9dee12ade649",
-            "containerId": "",
-            "name": "add a movie",
-            "url": "localhost:8080/movies",
-            "method": "POST",
-            "sortNum": 22500,
-            "created": "2023-10-30T08:07:07.161Z",
-            "modified": "2023-10-30T08:07:07.161Z",
-            "headers": [],
-            "params": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n    \"id\": \"34\",\n    \"name\": \"Dune\",\n    \"genre\": \"Science Fiction\",\n    \"img\": \"https://m.media-amazon.com/images/M/MV5BN2FjNmEyNWMtYzM0ZS00NjIyLTg5YzYtYThlMGVjNzE1OGViXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg\"\n}",
-                "form": []
-            },
-            "tests": []
+        "preRequestScript": "",
+        "testScript": "",
+        "body": {
+          "contentType": null,
+          "body": null
         },
-        {
-            "_id": "16e29d21-43dd-49bd-947e-9cd49b9d27fb",
-            "colId": "2e5d4120-c4a0-4713-a197-9dee12ade649",
-            "containerId": "",
-            "name": "update existing movie by id",
-            "url": "localhost:8080/movies/1",
-            "method": "PUT",
-            "sortNum": 25000,
-            "created": "2023-10-30T08:07:07.162Z",
-            "modified": "2023-10-30T08:07:07.162Z",
-            "headers": [],
-            "params": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n    \"name\": \"Big\",\n    \"genre\": \"Comedy\",\n    \"img\": \"https://m.media-amazon.com/images/I/71EnB3Hqx6L._AC_UF1000,1000_QL80_.jpg\"\n}",
-                "form": []
-            },
-            "tests": []
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "8",
+        "endpoint": "http://localhost:8080/movies/1",
+        "name": "Get Movie By Id",
+        "params": [],
+        "headers": [],
+        "method": "GET",
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
         },
-        {
-            "_id": "3711540a-3a56-4445-a95d-fbf10b1246ba",
-            "colId": "2e5d4120-c4a0-4713-a197-9dee12ade649",
-            "containerId": "",
-            "name": "delete existing movie by id",
-            "url": "localhost:8080/movies/",
-            "method": "DELETE",
-            "sortNum": 27500,
-            "created": "2023-10-30T08:07:07.163Z",
-            "modified": "2023-10-30T08:07:07.163Z",
-            "headers": [],
-            "params": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n    \"name\": \"Big\",\n    \"genre\": \"Comedy\",\n    \"img\": \"https://m.media-amazon.com/images/I/71EnB3Hqx6L._AC_UF1000,1000_QL80_.jpg\"\n}",
-                "form": []
-            },
-            "tests": []
-        }
-    ]
-}
+        "preRequestScript": "",
+        "testScript": "",
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "8",
+        "endpoint": "http://localhost:8080/movies/",
+        "name": "Add New Movie",
+        "params": [],
+        "headers": [],
+        "method": "POST",
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "preRequestScript": "",
+        "testScript": "",
+        "body": {
+          "contentType": "application/json",
+          "body": "{\n  \"name\":\"\",\n  \"genre\":\"\",\n  \"img\":\"\"\n}"
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "8",
+        "endpoint": "http://localhost:8080/movies/1",
+        "name": "Update Movie",
+        "params": [],
+        "headers": [],
+        "method": "PUT",
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "preRequestScript": "",
+        "testScript": "",
+        "body": {
+          "contentType": "application/json",
+          "body": "{\n  \"name\":\"\",\n  \"genre\":\"\",\n  \"img\":\"\"\n}"
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "8",
+        "endpoint": "http://localhost:8080/movies/1",
+        "name": "Delete Movie",
+        "params": [],
+        "headers": [],
+        "method": "DELETE",
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "preRequestScript": "",
+        "testScript": "",
+        "body": {
+          "contentType": "application/json",
+          "body": ""
+        },
+        "requestVariables": [],
+        "responses": {}
+      }
+    ],
+    "headers": [],
+    "auth": {
+      "authType": "none",
+      "authActive": true
+    }
+  }
+]

@@ -16,8 +16,17 @@ git clone https://github.com/Black-and-Hispanic-Tech-Summit/APIs-101.git
 cd APIs-101
 ```
 
-Download [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client) extension.
+## Hoppscotch
 
-![thunder client setup](./2-intro-to-express//images/thunder-client/thunder-client-setup-1.png)
+We will use [Hoppscotch.io](https://hoppscotch.io/) to test API responses. Hoppscotch is a web-based API development tool, available directly in the browser.
 
-When you are done setup you can start at [the apis section](./1-apis/README.md) to follow along.
+1. Go to [hoppscotch.io](https://hoppscotch.io/).
+1. If this is your first time using the tool, you will need to install the browser extension.
+
+    ![Hoppscotch](./images/hoppscotch-0.png)
+
+1. Select the browser of your choice. Ensure the option is toggled on for `Use the browser extension to send requests (if present)`.
+1. Add the extension.
+1. Return to hoppscotch.io
+
+When you have completed Hoppscotch setup, you can start at [the apis section](./1-apis/README.md) to follow along.
