@@ -130,7 +130,14 @@ To start the server:
 
 To actually access our current endpoint, we can use Hoppscotch! Enter `http://localhost:8080/about` to send a `GET` request to the root endpoint `/about`. Press **Send**.
 
-Your response should look like:
+![GET request](./images/request.png) 
+<br>
+
+----
+
+<br>
+
+Your **response** should then look like:
 
 ![response body](./images/response-body.png) 
 

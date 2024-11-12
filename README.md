@@ -21,12 +21,14 @@ cd APIs-101
 We will use [Hoppscotch.io](https://hoppscotch.io/) to test API responses. Hoppscotch is a web-based API development tool, available directly in the browser.
 
 1. Go to [hoppscotch.io](https://hoppscotch.io/).
-1. If this is your first time using the tool, you will need to install the browser extension.
+1. If this is your first time using the tool, click the Settings icon on the left.
+    
+    ![Hoppscotch Settings](./images/hoppscotch-settings.png)
+1. In Settings, scroll to the Interceptor section. Select **Browser extension: Not Reported**
 
-    ![Hoppscotch](./images/hoppscotch-extension-prompt.png)
+    ![Hoppscotch](./images/hoppscotch-extension-selector.png)
+1. Click the browser of your choice.
+    And follow instructions in the tab that opens for either Chrome or Firefox.
+1. Return to hoppscotch.io and refresh the page.
 
-1. Select the browser of your choice. Ensure the option is toggled on for `Use the browser extension to send requests (if present)`.
-1. Add the extension.
-1. Return to hoppscotch.io
-
-When you have completed Hoppscotch setup, you can start at [the apis section](./1-apis/README.md) to follow along.
+That's it! You can start at [the apis section](./1-apis/README.md) to follow along. Hoppscotch will be ready for you to use throughout the exercise.
