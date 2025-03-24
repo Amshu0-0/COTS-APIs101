@@ -295,6 +295,6 @@ app.listen(PORT, () => {
 
 ## Conclusion
 
-Congrats on building the Movie Service! To test the service, you can use Hoppscotch to make sure all endpoints are working as intended and that the API is ready to be integrated with the React app created in [React 101](https://github.com/Black-and-Hispanic-Tech-Summit/React-101). A step by step process to make this connection is shown in the [Full Stack Applied](https://github.com/Black-and-Hispanic-Tech-Summit/Full-Stack-Applied) repo.
+Congrats on building the Movie Service! To test the service, you can use Hoppscotch to make sure all endpoints are working as intended and that the API is ready to be integrated with the React app created in [React 101](https://github.com/Tech-Summit-Learning/React-101). A step by step process to make this connection is shown in the [Full Stack Applied](https://github.com/Tech-Summit-Learning/Full-Stack-Applied) repo.
 
 You can view how the final application's codebase should look [here](../reference/finished-movies-api/).

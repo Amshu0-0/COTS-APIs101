@@ -12,7 +12,7 @@ We will use `git` to download the repository to our local machine.
 So for example, to download this repository, we would run
 
 ```sh
-git clone https://github.com/Black-and-Hispanic-Tech-Summit/APIs-101.git
+git clone https://github.com/Tech-Summit-Learning/APIs-101.git
 cd APIs-101
 ```
 
